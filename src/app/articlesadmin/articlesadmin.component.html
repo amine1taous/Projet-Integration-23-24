@@ -1,0 +1,63 @@
+<app-menuadmin></app-menuadmin>
+
+<div
+  style="
+    width: 90%;
+    height: max-content;
+    background-color: white;
+    margin-left: 5%;
+    margin-top: 2%;
+  "
+>
+  <div
+    style="
+      display: flex;
+      justify-content: space-between;
+      width: 90%;
+      margin-left: 5%;
+      margin-bottom: 2%;
+    "
+  >
+    <h2 style="font-family: rubik">Liste des articles</h2>
+    <button
+      class="btn btn-success"
+      style="width: 100px; height: 35px; margin-top: 10px"
+      routerLink="/addarticle"
+    >
+      Ajouter
+      <i class="fa-solid fa-plus"></i>
+    </button>
+  </div>
+
+  <table class="table table-striped">
+    <thead>
+      <tr style="font-family: rubik; font-size: 18px">
+        <th>Identifiant</th>
+        <th>Nom du Produit</th>
+        <th>Details</th>
+        <th>Origine</th>
+        <th>Description</th>
+        <th colspan="2" style="padding-left: 100px">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let art of articles$ | async">
+        <td>{{ art.id }}</td>
+        <td>{{ art.nom }}</td>
+        <td>{{ art.detail }}</td>
+        <td>{{ art.origine }}</td>
+        <td>{{ art.description }}</td>
+        <td>
+          <button class="btn btn-warning" style="padding: 5px" disabled>
+            Details<i class="fa-solid fa-circle-info"></i>
+          </button>
+        </td>
+        <td>
+          <button class="btn btn-danger">
+            Supprimer<i class="fa-solid fa-trash"></i>
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,106 @@
+<app-menuadmin></app-menuadmin>
+<div
+  style="
+    width: 90%;
+    height: max-content;
+    background-color: white;
+    margin-left: 5%;
+    margin-top: 2%;
+  "
+>
+  <!-- signup-form.component.html -->
+
+  <div
+    class="container"
+    style="border: 1px solid #ccc; width: 95%; padding: 2%; margin-bottom: 2%"
+  >
+    <h2 style="font-family: rubik; text-align: center">
+      Enregistrer un Nouveau Article
+    </h2>
+    <div
+      style="
+        border: 1px solid rgb(231, 231, 231);
+        width: 90%;
+        margin-left: 25px;
+      "
+    ></div>
+
+    <form>
+      <div
+        style="
+          display: flex;
+          justify-content: space-between;
+          width: 90%;
+          padding-left: 10%;
+        "
+      >
+        <!-- partie gauche -->
+        <div style="width: 45%; margin-top: 15px">
+          <label>Nom *:</label><br />
+          <input
+            type="text"
+            style="
+              width: 80%;
+              border-radius: 5px;
+              background-color: white;
+              border: 1px solid #ccc;
+              height: 35px;
+              padding-left: 10px;
+            "
+            required
+            placeholder="Veuillez saisir le nom du produit"
+          /><br />
+          <label>Detail *:</label><br />
+          <textarea
+            style="
+              border: 1px solid #ccc;
+              border-radius: 5px;
+              width: 80%;
+              height: 150px;
+            "
+            placeholder="Veuillez introduire le detail du l'article"
+            required
+          ></textarea
+          ><br />
+          <label>Origine *:</label><br />
+          <input
+            type="text"
+            style="
+              border: 1px solid #ccc;
+              border-radius: 5px;
+              width: 80%;
+              height: 35px;
+              padding-left: 10px;
+            "
+            required
+            placeholder="Veuillez saisir la quantité disponible"
+          /><br />
+        </div>
+        <!-- partie droite -->
+        <div style="width: 45%; margin-top: 15px">
+          <label>Description *:</label><br />
+          <textarea
+            style="
+              border: 1px solid #ccc;
+              border-radius: 5px;
+              width: 80%;
+              height: 100px;
+            "
+            placeholder="Veuillez introduire la description du produit"
+            required
+          ></textarea
+          ><br />
+          <label>image *:</label><br />
+          <input type="file" />
+          <br />
+        </div>
+      </div>
+    </form>
+    <input
+      type="submit"
+      value="Enregistrer"
+      class="btn btn-success"
+      style="margin-left: 45%"
+    />
+  </div>
+</div>

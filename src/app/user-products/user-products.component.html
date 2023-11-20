@@ -1,0 +1,64 @@
+<app-user-menu></app-user-menu>
+
+<div
+  class="page-heading products-heading header-text"
+  style="background-image: url(../../assets/images/products-heading.jpg)"
+>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="text-content">
+          <h4>new arrivals</h4>
+          <h2>SportLife products</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="products">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="filters">
+          <ul>
+            <li class="active" data-filter="*">All Products</li>
+            <li data-filter=".des"></li>
+            <li data-filter=".dev"></li>
+            <li data-filter=".gra"></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-12">
+        <div class="filters-content">
+          <div class="row">
+            <!-- Boucle pour chaque groupe de 3 produits -->
+            <!-- Boucle pour chaque produit dans le groupe -->
+            <div
+              class="col-lg-4 col-md-4 all des"
+              *ngFor="let prod of products$ | async; let j = index"
+            >
+              <div class="product-item">
+                <a href="#"><img [src]="prod.image" alt="Product Image" /></a>
+                <div class="down-content">
+                  <a href="#"
+                    ><h4>{{ prod.nom }}</h4></a
+                  ><br />
+                  <h6>{{ prod.prix }}$</h6>
+                  <!-- <p>{{ prod.description }}</p> -->
+                  <ul class="stars">
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
