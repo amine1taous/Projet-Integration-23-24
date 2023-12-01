@@ -25,7 +25,7 @@
       "
     ></div>
 
-    <form>
+    <form [formGroup]="fg">
       <div
         style="
           display: flex;
@@ -39,6 +39,7 @@
           <label>Nom *:</label><br />
           <input
             type="text"
+            formControlName="nom"
             style="
               width: 80%;
               border-radius: 5px;
@@ -52,6 +53,7 @@
           /><br />
           <label>Detail *:</label><br />
           <textarea
+            formControlName="detail"
             style="
               border: 1px solid #ccc;
               border-radius: 5px;
@@ -64,6 +66,7 @@
           ><br />
           <label>Origine *:</label><br />
           <input
+            formControlName="origin"
             type="text"
             style="
               border: 1px solid #ccc;
@@ -80,6 +83,7 @@
         <div style="width: 45%; margin-top: 15px">
           <label>Description *:</label><br />
           <textarea
+            formControlName="description"
             style="
               border: 1px solid #ccc;
               border-radius: 5px;
@@ -91,7 +95,7 @@
           ></textarea
           ><br />
           <label>image *:</label><br />
-          <input type="file" />
+          <input type="file" formControlName="image" />
           <br />
         </div>
       </div>
@@ -101,6 +105,7 @@
       value="Enregistrer"
       class="btn btn-success"
       style="margin-left: 45%"
+      (submit)="onSubmit()"
     />
   </div>
 </div>

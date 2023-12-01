@@ -1,0 +1,203 @@
+<!-- <app-acceuil-client></app-acceuil-client>
+<app-formulaire-ajout-prod></app-formulaire-ajout-prod> -->
+
+<!--<app-dashadmin></app-dashadmin>-->
+
+<!--<app-login-form></app-login-form>-->
+
+<div *ngIf="test">
+  <div class="login-container">
+    <div class="background-image"></div>
+    <div class="login-form">
+      <h2 style="text-align: left; font-weight: bold">Inscription</h2>
+      <hr />
+      <br />
+      <form style="width: 50%; float: left">
+        <label
+          for="username"
+          style="font-weight: bold; text-align: left; float: left"
+          >Nom :</label
+        >
+        <input
+          type="text"
+          id="username"
+          name="username"
+          required
+          placeholder="Entrer votre nom d'utilisateur"
+          style="width: 90%; float: left; background-color: white   "
+        />
+
+        <label
+          for="password"
+          style="font-weight: bold; text-align: left; float: left"
+          >Prénom :</label
+        >
+        <input
+          type="password"
+          id="password"
+          name="password"
+          required
+          placeholder="Entrer votre mot de passe"
+          style="width: 90%; float: left"
+        />
+
+        <label
+          for="password"
+          style="font-weight: bold; text-align: left; float: left"
+          >Date de naissance :</label
+        >
+        <input
+          type="date"
+          id="date"
+          name="date"
+          required
+          placeholder="Entrer votre mot de passe"
+          style="width: 90%; float: left"
+        />
+
+        <label for="password" style="font-weight: bold; text-align: left"
+          >Sexe :</label
+        >
+        <select
+          style="
+            width: 40%;
+            float: left;
+            border-radius: 5px;
+            background-color: white;
+            text-align: left;
+          "
+        >
+          <option>Homme</option>
+          <option>Femme</option></select
+        ><br />
+      </form>
+
+      <form style="width: 50%; float: right">
+        <label
+          for="username"
+          style="font-weight: bold; text-align: left; float: left"
+          >Nom d'utilisateur :</label
+        >
+        <input
+          type="text"
+          id="username"
+          name="username"
+          required
+          placeholder="Entrer votre nom d'utilisateur"
+          style="width: 90%; float: left"
+        />
+
+        <label
+          for="password"
+          style="font-weight: bold; text-align: left; float: left"
+          >Mot de passe :</label
+        >
+        <input
+          type="password"
+          id="password"
+          name="password"
+          required
+          placeholder="Entrer votre mot de passe"
+          style="width: 90%; float: left"
+        />
+
+        <label
+          for="password"
+          style="font-weight: bold; text-align: left; float: left"
+          >Confirmée mot de passe :</label
+        >
+        <input
+          type="password"
+          id="password"
+          name="password"
+          required
+          placeholder="Entrer votre mot de passe"
+          style="width: 90%; float: left"
+        />
+
+        <div>
+          <input type="checkbox" name="checkbox" value="" />
+          <label for="password" style="font-weight: bold"
+            >Accepter la politique du site web</label
+          >
+        </div>
+
+        <button
+          type="submit"
+          style="width: 300px; text-align: center"
+          (click)="se()"
+        >
+          Suivant
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="test == false">
+  <div class="login-container">
+    <div class="background-image"></div>
+    <div class="login-form">
+      <h2 style="text-align: left; font-weight: bold">Inscription</h2>
+
+      <p style="text-align: left; font-weight: bold; font-size: large">
+        Quelles est votre objectifs
+      </p>
+      <br />
+      <form style="width: 50%; float: left">
+        <div class="checkbox-container">
+          <!-- Utilisez l'élément label pour le texte du label -->
+          <label for="monCheckbox">Mon Label :</label>
+          <!-- Utilisez l'élément input avec type="checkbox" et l'attribut id correspondant au "for" du label -->
+          <input type="checkbox" id="monCheckbox" name="monCheckbox" />
+        </div>
+
+        <div class="checkbox-container">
+          <!-- Utilisez l'élément label pour le texte du label -->
+          <label for="monCheckbox">Mon Label :</label>
+          <!-- Utilisez l'élément input avec type="checkbox" et l'attribut id correspondant au "for" du label -->
+          <input type="checkbox" id="monCheckbox" name="monCheckbox" />
+        </div>
+
+        <div class="checkbox-container">
+          <!-- Utilisez l'élément label pour le texte du label -->
+          <label for="monCheckbox">Mon Label :</label>
+          <!-- Utilisez l'élément input avec type="checkbox" et l'attribut id correspondant au "for" du label -->
+          <input type="checkbox" id="monCheckbox" name="monCheckbox" />
+        </div>
+
+        <div class="checkbox-container">
+          <!-- Utilisez l'élément label pour le texte du label -->
+          <label for="monCheckbox">Mon Label :</label>
+          <!-- Utilisez l'élément input avec type="checkbox" et l'attribut id correspondant au "for" du label -->
+          <input type="checkbox" id="monCheckbox" name="monCheckbox" />
+        </div>
+
+        <div class="checkbox-container">
+          <!-- Utilisez l'élément label pour le texte du label -->
+          <label for="monCheckbox">Mon Label :</label>
+          <!-- Utilisez l'élément input avec type="checkbox" et l'attribut id correspondant au "for" du label -->
+          <input type="checkbox" id="monCheckbox" name="monCheckbox" />
+        </div>
+
+        <div class="checkbox-container">
+          <!-- Utilisez l'élément label pour le texte du label -->
+          <label for="monCheckbox">Mon Label :</label>
+          <!-- Utilisez l'élément input avec type="checkbox" et l'attribut id correspondant au "for" du label -->
+          <input type="checkbox" id="monCheckbox" name="monCheckbox" />
+        </div>
+
+        <div class="checkbox-container">
+          <!-- Utilisez l'élément label pour le texte du label -->
+          <label for="monCheckbox">Mon Label :</label>
+          <!-- Utilisez l'élément input avec type="checkbox" et l'attribut id correspondant au "for" du label -->
+          <input type="checkbox" id="monCheckbox" name="monCheckbox" />
+        </div>
+      </form>
+      <br /><br /><br /><br />
+      <button type="submit" style="width: 300px; text-align: center">
+        Valider
+      </button>
+    </div>
+  </div>
+</div>

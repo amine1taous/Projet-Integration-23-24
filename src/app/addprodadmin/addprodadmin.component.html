@@ -25,7 +25,7 @@
       "
     ></div>
 
-    <form>
+    <form [formGroup]="fg">
       <div
         style="
           display: flex;
@@ -49,6 +49,8 @@
             "
             required
             placeholder="Veuillez saisir le nom du produit"
+            class="form-control"
+            formControlName="nom"
           /><br />
           <label>Description *:</label><br />
           <textarea
@@ -60,6 +62,8 @@
             "
             placeholder="Veuillez introduire la description du produit"
             required
+            class="form-control"
+            formControlName="description"
           ></textarea
           ><br />
           <label>Quantite en stock *:</label><br />
@@ -74,6 +78,8 @@
             "
             required
             placeholder="Veuillez saisir la quantité disponible"
+            class="form-control"
+            formControlName="quantite"
           /><br />
           <label>Prix *:</label><br />
           <input
@@ -85,8 +91,10 @@
               padding-left: 10px;
               height: 35px;
             "
+            formControlName="prix"
             required
             placeholder="Veuillez saisir le prix du produit"
+            class="form-control"
           />
         </div>
         <!-- partie droite -->
@@ -102,15 +110,19 @@
               height: 35px;
               padding-left: 10px;
             "
+            formControlName="disponibilite"
             required
             placeholder="Veuillez saisir le nom du produit"
+            class="form-control"
           /><br />
           <label>image *:</label><br />
-          <input type="file" />
+          <input type="file" formControlName="image" class="form-control" />
           <br />
           <label>Categorie *:</label><br />
           <select
-            style="border: 1px solid #ccc; border-radius: 5px; height: 25px"
+            style="border: 1px solid #ccc; border-radius: 5px; height: 45px"
+            class="form-control"
+            formControlName="categorie"
           >
             <option>Proteine</option>
             <option>Acide Aminé</option>
@@ -119,28 +131,18 @@
             <option>Endurance</option>
             <option>Equipement Sportif</option></select
           ><br />
-          <label>Identifiant *:</label><br />
-          <input
-            type="text"
-            style="
-              width: 80%;
-              border-radius: 5px;
-              background-color: white;
-              border: 1px solid #ccc;
-              height: 35px;
-              padding-left: 10px;
-            "
-            required
-            placeholder="Veuillez saisir l'identifiant du produit"
-          /><br />
         </div>
       </div>
     </form>
-    <input
+
+    <br /><br />
+    <button
       type="submit"
-      value="Enregistrer"
       class="btn btn-success"
       style="margin-left: 45%"
-    />
+      (click)="onSubmit()"
+    >
+      Submit
+    </button>
   </div>
 </div>

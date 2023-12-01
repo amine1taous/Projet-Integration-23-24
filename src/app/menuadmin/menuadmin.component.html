@@ -9,7 +9,11 @@
   "
 >
   <div style="margin-top: 70px; color: rgb(182, 182, 182)">
-    <p>Emplacement logo</p>
+    <p>
+      <a class="navbar-brand" routerLink="/dashadmin"
+        ><h2>Sport <em>Life</em></h2></a
+      >
+    </p>
   </div>
   <div>
     <ul
@@ -21,7 +25,9 @@
       "
     >
       <li style="font-size: 20px; margin-top: 40px; margin-right: 10px">
-        <i class="bx bxs-dashboard" style="padding-right: 2px"></i>Dashboard
+        <a routerLink="/dashadmin">
+          <i class="bx bxs-dashboard" style="padding-right: 2px"></i>Dashboard
+        </a>
       </li>
       <li style="font-size: 20px; margin-top: 40px; margin-right: 10px">
         <a routerLink="/products"
@@ -36,10 +42,7 @@
         >
       </li>
       <li style="font-size: 20px; margin-top: 40px; margin-right: 10px">
-        <a routerLink="/articles"
-          ><i class="fa-solid fa-newspaper" style="padding-right: 2px"></i
-          >Articles</a
-        >
+        <a routerLink="/articles">Articles</a>
       </li>
       <li style="font-size: 20px; margin-top: 40px; margin-right: 10px">
         <a routerLink="/communications"

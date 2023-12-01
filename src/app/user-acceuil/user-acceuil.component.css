@@ -107,6 +107,11 @@
   margin-bottom: 30px;
 }
 
+.product-item:hover {
+  border: 2px solid grey;
+  border-radius: 5px;
+}
+
 .product-item .down-content {
   padding: 30px;
   position: relative;

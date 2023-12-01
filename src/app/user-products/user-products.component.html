@@ -15,44 +15,63 @@
     </div>
   </div>
 </div>
-
-<div class="products">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <div class="filters">
-          <ul>
-            <li class="active" data-filter="*">All Products</li>
-            <li data-filter=".des"></li>
-            <li data-filter=".dev"></li>
-            <li data-filter=".gra"></li>
-          </ul>
+<div style="width: 90%; margin-left: 5%">
+  <div class="products">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="filters">
+            <ul>
+              <li class="active" data-filter="*">All Products</li>
+              <li data-filter=".des"></li>
+              <li data-filter=".dev"></li>
+              <li data-filter=".gra"></li>
+            </ul>
+          </div>
         </div>
-      </div>
-      <div class="col-md-12">
-        <div class="filters-content">
-          <div class="row">
-            <!-- Boucle pour chaque groupe de 3 produits -->
-            <!-- Boucle pour chaque produit dans le groupe -->
-            <div
-              class="col-lg-4 col-md-4 all des"
-              *ngFor="let prod of products$ | async; let j = index"
-            >
-              <div class="product-item">
-                <a href="#"><img [src]="prod.image" alt="Product Image" /></a>
-                <div class="down-content">
-                  <a href="#"
-                    ><h4>{{ prod.nom }}</h4></a
-                  ><br />
-                  <h6>{{ prod.prix }}$</h6>
-                  <!-- <p>{{ prod.description }}</p> -->
-                  <ul class="stars">
-                    <li><i class="fa fa-star"></i></li>
-                    <li><i class="fa fa-star"></i></li>
-                    <li><i class="fa fa-star"></i></li>
-                    <li><i class="fa fa-star"></i></li>
-                    <li><i class="fa fa-star"></i></li>
-                  </ul>
+        <div class="col-md-12">
+          <div class="filters-content">
+            <div class="row">
+              <!-- Boucle pour chaque groupe de 3 produits -->
+              <!-- Boucle pour chaque produit dans le groupe -->
+              <div
+                class="col-lg-3 col-md-4 all des"
+                *ngFor="let prod of products$ | async; let j = index"
+              >
+                <div
+                  class="product-item"
+                  (mouseenter)="onMouseEnter(j)"
+                  (mouseleave)="onMouseLeave()"
+                  style="border-radius: 10px"
+                >
+                  <a href="#"><img [src]="prod.image" alt="Product Image" /></a>
+                  <div class="down-content">
+                    <a href="#"
+                      ><h4>{{ prod.nom }}</h4></a
+                    ><br />
+                    <h6>{{ prod.prix }}</h6>
+                    <ul class="stars">
+                      <li><i class="fa fa-star"></i></li>
+                      <li><i class="fa fa-star"></i></li>
+                      <li><i class="fa fa-star"></i></li>
+                      <li><i class="fa fa-star"></i></li>
+                      <li><i class="fa fa-star"></i></li>
+                    </ul>
+                    <!-- Bouton Détails -->
+                    <button
+                      *ngIf="isHovered[j]"
+                      style="
+                        border-radius: 10px;
+                        margin-top: -480px;
+                        margin-left: 95px;
+                        padding: 10px;
+                      "
+                      class="btn btn-danger"
+                      routerLink="/detailproduct"
+                    >
+                      Détails
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
@@ -62,3 +81,4 @@
     </div>
   </div>
 </div>
+<app-userfooter></app-userfooter>

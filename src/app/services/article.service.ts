@@ -21,7 +21,7 @@ export class ArticleService {
     return this.http.get<Article>(URL + '/' + id);
   }
   addArticle(p: Article): Observable<Article> {
-    return this.http.post<Article>(URL, p);
+    return this.http.post<Article>(URL + '/addArticle', p);
   }
   supArticle(id: number) {
     return this.http.delete(URL + '/' + id);

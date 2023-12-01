@@ -13,7 +13,7 @@ body {
 }
 
 .background-image {
-  background-image: url("../../assets/images/azz.png"); /* Ajoutez le chemin de votre image ici */
+  background-image: url("../../assets/images/ac.png"); /* Ajoutez le chemin de votre image ici */
   background-size: cover;
   background-position: center;
   position: absolute;
@@ -34,7 +34,7 @@ body {
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  width: 300px;
+  width: 800px;
   text-align: center;
 }
 
@@ -70,9 +70,19 @@ button {
 }
 
 button:hover {
-  background-color: #0056b3;
+  background-color: #242525;
 }
 img {
   width: 150;
   height: 100px;
+}
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+}
+
+/* Optionnel : Ajoutez du style au label pour le distinguer */
+.checkbox-container label {
+  margin-right: 8px;
 }

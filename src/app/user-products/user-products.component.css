@@ -5,6 +5,7 @@ p {
   color: #4a4a4a;
   line-height: 24px;
 }
+
 a {
   text-decoration: none !important;
 }
@@ -391,8 +392,49 @@ header .navbar {
 }
 
 .product-item {
-  border: 1px solid #eee;
-  margin-bottom: 30px;
+  /* Styles par défaut de votre produit */
+  position: relative;
+  overflow: hidden; /* Assurez-vous que le contenu débordant ne gâche pas la transition */
+  transition: background-color 0.3s ease-in-out;
+}
+
+.product-item img {
+  /* Styles de l'image par défaut */
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: filter 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.product-item:hover {
+  background-color: rgba(128, 128, 128, 0.5);
+}
+
+.product-item:hover img {
+  /* Appliquer le filtre de gris et l'opacité au survol */
+  filter: grayscale(100%);
+  opacity: 0.7;
+}
+
+/* .product-item::after {
+  content: "Détails"; 
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0; 
+  color: #fff;
+  padding: 8px 16px;
+  background-color: #ff5733; 
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: opacity 0.3s ease-in-out;
+} */
+
+.product-item:hover::after {
+  /* Affichez le bouton au survol */
+  opacity: 1;
 }
 
 .product-item .down-content {

@@ -4,20 +4,15 @@ import { Product } from '../classes/product';
 import { ProduitService } from '../services/product.service';
 
 @Component({
-  selector: 'app-productsadmin',
-  templateUrl: './productsadmin.component.html',
-  styleUrls: ['./productsadmin.component.css'],
+  selector: 'app-admindashboard',
+  templateUrl: './admindashboard.component.html',
+  styleUrls: ['./admindashboard.component.css'],
 })
-export class ProductsadminComponent implements OnInit {
+export class AdmindashboardComponent implements OnInit {
   products$!: Observable<Product[]>;
-
   constructor(private prodService: ProduitService) {}
 
   ngOnInit(): void {
     this.products$ = this.prodService.getProduits();
-  }
-
-  deleteProduct(id: String) {
-    this.prodService.supProduct(id).subscribe((data) => console.log(data));
   }
 }

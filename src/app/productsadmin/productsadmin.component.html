@@ -31,7 +31,6 @@
   <table class="table table-striped">
     <thead>
       <tr style="font-family: rubik; font-size: 18px">
-        <th>Identifiant</th>
         <th>Nom du Produit</th>
         <th>Prix</th>
         <th>Stock</th>
@@ -42,14 +41,17 @@
     </thead>
     <tbody>
       <tr *ngFor="let prod of products$ | async">
-        <td>{{ prod.id }}</td>
         <td>{{ prod.nom }}</td>
         <td>{{ prod.prix }}</td>
         <td>{{ prod.stock }}</td>
         <td>{{ prod.disponibilite }}</td>
         <td>{{ prod.categorie }}</td>
         <td>
-          <button class="btn btn-warning" style="padding: 5px" disabled>
+          <button
+            class="btn btn-warning"
+            style="padding: 5px; color: white"
+            [routerLink]="['/products/modif', prod.id]"
+          >
             Details<i class="fa-solid fa-circle-info"></i>
           </button>
         </td>
